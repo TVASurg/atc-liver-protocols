@@ -63,11 +63,9 @@
         <h5 class="offcanvas-title" id="offcanvasBottomLabel">Informed Consent</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-      <div class="offcanvas-body ">
-        
+      <div id="offcanvasBottomContent" class="offcanvas-body ">
 
-<embed src="pages/test.pdf" type="application/pdf" width="100%" height="100%">
-</div>
+      </div>
     </div>
 
 
@@ -210,7 +208,8 @@
       
       for (i=0; i<menuArray.length; i++)
       {
-        contentHTML += `<button class="btn btn-outline-dark mt-2 rounded px-5" style="min-height: 70px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">`;
+        contentHTML += `<button class="btn btn-outline-dark mt-2 rounded px-5" style="min-height: 70px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"`;
+        contentHTML += `onclick="fetchContent('pages/01_01_02.html')">`;
         contentHTML +=  menuArray[i];
         contentHTML += `</button>`;
       }
@@ -221,22 +220,25 @@
 
     }
 
-    function showOffCanvas()
+    function fetchContent(file) {
+      fetch(file)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById("offcanvasBottomContent").innerHTML = html;
+        })
+        .catch(err => {
+            document.getElementById("offcanvasBottomContent").innerHTML =
+                "<p style='color:red;'>Error loading content.</p>";
+            console.error(err);
+        });
+    }
+
+    function showOffCanvasContent()
     {
 
     }
 
-    //backwards nav
-    //consider how far back user wants to go
-    //then determine which breadcrumbs to clear, which to stay
-    //then determine which menu to bring back
-
-
-    function clearMenuArea()
-    {
-
-    }
-
+    
 
   </script>
   
