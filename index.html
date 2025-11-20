@@ -16,250 +16,35 @@
 <body>
 
   <main class="container">
-    <nav class="navbar navbar-light p-5">
-    <img class="img-fluid mx-auto d-block" src="images/logo-Transplant.svg"/>  
+    <nav class="navbar navbar-light py-3 px-5">
+    <img class="img-fluid mx-auto d-block" src="images/logo-Transplant.svg"/>
     </nav>    
 
     <div class="row">
-
-    <!-- Breadcrumb nav -->
-    <nav style="--bs-breadcrumb-divider: '>';" class="border border-secondary rounded mt-2" aria-label="breadcrumb">
-      <ol id ="nav_breadcrumb" class="breadcrumb m-3"> You are here: &nbsp;
-        <li class="breadcrumb-item"><a href="#" onclick="returnToHome()">Home</a></li>
-        <!-- <li class="breadcrumb-item active" aria-current="page">Home</a></li> -->
-      </ol>
-    </nav>
-
-    <!-- Main topic menu  -->
-    
-    <div id="menu_mainTopic" class="d-flex p-0 m-0">
-    <div class="d-grid gap-1 col-6 p-1">
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showTileMenu(collectionArrays._01_menu, `_01_menu`); updateBreadcrumb(`Donor management`, `_01_menu`, false)">Donor <br/>management</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showTileMenu(collectionArrays._03_menu, `_03_menu`); updateBreadcrumb(`Recipient listing/Pre-transplant management`, `_03_menu`, false)">Recipient listing <br/> / Pre-transplant management</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showTileMenu(collectionArrays._05_menu, `_05_menu`); updateBreadcrumb(`Recipient - Long term post-transplant management`, `_05_menu`, false)">Recipient - <br/>Long term post-transplant management</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showContentMenu(collectionArrays._07_menu, `_07_menu`); updateBreadcrumb(`Calculators`, `_07_menu`, true)">Calculators</button>
-    </div>
-
-    <div class="d-grid gap-1 col-6 p-1">
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showTileMenu(collectionArrays._02_menu, `_02_menu`); updateBreadcrumb(`Recipient evaluation`, `_02_menu`, false)">Recipient <br/> evaluation</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showTileMenu(collectionArrays._04_menu, `_04_menu`); updateBreadcrumb(`Recipient - Perioperative/Immediate post-transplant care`, `_04_menu`, false)">Recipient -<br/>Perioperative/Immediate<br/>post-transplant care</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showContentMenu(collectionArrays._06_menu, `_06_menu`); updateBreadcrumb(`Special considerations`, `_06_menu`, true)">Special <br/>considerations</button>
-      <button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;" onclick="showContentMenu(collectionArrays._08_menu, `_08_menu`); updateBreadcrumb(`Resident/Fellow resources`, `_08_menu`, true)">Resident / Fellow <br/> resources</button>
-    </div> 
-    </div>
-
-    <!-- 2 column menu -->
-    <div id="menu_section" class="d-flex p-0 m-0">
-    </div>
-  
-    
-    <!-- 1 column menu  -->
-    <div id="menu_content" class="d-flex p-0 m-0">
-    </div>
-
-    <!-- Main content as an offCanvas element-->
-     <div class="offcanvas offcanvas-bottom" data-bs-backdrop="static" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="min-height: 95%;">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Informed Consent</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div id="offcanvasBottomContent" class="offcanvas-body ">
-
-      </div>
-    </div>
-
-
-
+      <p>
+    <strong>Welcome to the Ajmera Transplant Centre</strong>
+</p>
+<p>
+    The Ajmera Transplant Centre at University Health Network (UHN) is the largest and most comprehensive transplant program in Canada and ranks among the top five in North America. With internationally recognized excellence in kidney, liver, lung, heart, pancreas, and intestinal transplantation, the Centre is a hub for clinical innovation, research, and patient-centered care. Its strength lies in a deeply collaborative, multidisciplinary model that integrates surgeons, hepatologists, nephrologists, cardiologists, infectious disease specialists, nursing, allied health, and transplant coordinators. Patients from across Canada and around the world are referred to the Centre for complex transplant care, drawn by its superior surgical outcomes and groundbreaking research in immune tolerance, organ repair, and personalized medicine. As part of its vision outlined in the Transplant 2025 strategy, the Ajmera Transplant Centre continues to lead the transformation of transplant care through digital innovation, quality improvement, and education.
+</p>
+<div class="text-center mx-auto my-5"><a href="main.html"type="button" class="btn btn-primary">Launch liver webapp</a></div>
+<p>
+    <strong>Welcome Residents and Fellows!</strong>
+</p>
+<p>
+    Welcome to your Liver Transplant Rotation at UHN’s Toronto General Hospital (TGH). This rotation provides exposure to one of Canada’s busiest and most advanced liver transplant programs, performing over 200 liver transplants annually. Approximately one-third of these are from living donors, with the remaining two-thirds from deceased donation. At any given time, over 230 patients are active on the waitlist. Since its inception, the program has completed more than 4,600 liver transplants, including over 1,300 living donor procedures. In addition to surgery, the program delivers comprehensive, lifelong post-transplant care.
+</p>
+<p>
+    Your rotation typically includes two weeks on inpatient service and two weeks in outpatient clinics, with one weekend of home call. This app is designed to support your experience by providing centralized access to key protocols, orientation materials, and clinical tools. Whether you’re managing new referrals, participating in transplant rounds, or following up with post-transplant patients, this resource will help guide your workflow and enhance your understanding of liver transplantation at UHN.
+</p>
+<p>
+    For any additional information for patients or forms, use the <a target="_blank" rel="noopener noreferrer" href="https://www.uhn.ca/Transplant/Living_Donor_Program/Resource_Library/Pages/resource_library.aspx#forms">Ajmera Transplant Center Resource Library.&nbsp;</a>
+</p>
     </div>
     
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script>
-    const collectionArrays = {
-
-      _00_topMenu:[],
-
-      _01_menu:["Living donor evaluation", "Deceased donor evaluation"],
-      _02_menu:["Transplant indications", "Contraindications", "Pre-transplant work up"],
-      _03_menu:["Listing and waitlist management", "Bloodwork and prep"],
-      _04_menu:["Surgical (Procedure/Complications)","Medical (Medications/Management)"],
-      _05_menu:["Immunosuppression","Common infections and treatment","Complications","Management"],
-      _06_menu:["Pediatric patient transition", "Neuroendocrine liver metastases", "ABO-incompatible liver transplant protocol", "Mayo protocol for hilar cholangiocarcinoma"],
-      _07_menu:["MELD-Na score","Milan criteria","Total tumor volume (TTV)","Child-Pugh score","Kings College criteria"],
-      _08_menu:["MOT call","Liver transplant rotations","Logbook","Directory","Call/rounds schedule"],
-
-      _01_menu_01:["Suitability criteria","Living donor evaluation process overview","Work up protocol","Donor compensation and support","Living donor surgery","Hepatitis virus positive donors"],
-
-      _01_menu_02:["General workup and considerations for diseased donors","Donor risk factors and selection criteria","Retrieval and logistics","Marginal donor considerations","Graft perfusion and packaging SOP"],
-
-      _02_menu_01:["Indications", "Referrals","Exception points"],
-      _02_menu_02:["Contraindications to listing", "Referrals to UHN"],
-      _02_menu_03:["Formal assessment"],
-
-      _03_menu_01:["HCC", "SAH", "Chronic ALD"],
-      _03_menu_02:["Assessment and testing for listed patients", "Smoking cessation"],
-
-      _04_menu_01:["Pre-operative (Bloodwork and prep)", "Pre-operative (Donor)","Operative (Living donor process)", "Intraoperative management", "Transfusion protocols", "Post-operative(Living donor)"],
-      _04_menu_02:["Surgical ICU and early post-op medical care", "Anti-rejection meds", "Bacterial prophylaxis meds", "Viral prophylaxis meds", "Anti-fungal and anti-parasitic prophylaxis meds", "Other medications"],
-
-      _05_menu_01:["Immunosuppression management","Immune checkpoint therapy", "INDILIV year 1", "INDILIV beyond year 1"],
-      _05_menu_02:["Common infections and treatment", "Hepatitis patients", "Acute complications"],
-      _05_menu_03:["Cardiovascular concerns post transplant", "Gout", "Osteoporosis/Osteopenia", "Chronic ductopenic rejection"],
-      _05_menu_04:["Post-transplant bloodwork and management","Imaging surveillance", "HCC surveillance"]
-
-      //06,07,08 all jump direct to offcanvas content
-
-
-    }
-
-
-    function returnToHome()
-    {
-      document.getElementById(`nav_breadcrumb`).innerHTML = `You are here: &nbsp;<li class="breadcrumb-item"><a href="#" onclick="returnToHome()">Home</a></li>`;
-      document.getElementById('menu_section').innerHTML= "";
-      document.getElementById('menu_content').innerHTML= "";
-      document.getElementById('menu_mainTopic').classList.remove(`d-none`);
-    }
-
-    function updateBreadcrumb(crumbToAdd, arrayName, isTerminal)
-    {
-     
-      var addedLinkHTML = "";
-      
-      if (isTerminal == true)
-      {
-        addedLinkHTML += `<li class="breadcrumb-item active" aria-current="page"><a href="#" onclick="showContentMenu(`;
-      }
-      else if (isTerminal == false)
-      {
-        addedLinkHTML += `<li class="breadcrumb-item active" aria-current="page"><a href="#" onclick="showTileMenu(`;
-          
-      }
-      addedLinkHTML += `collectionArrays.`+ arrayName + `, '`+ arrayName + `')">`;  
-      addedLinkHTML += crumbToAdd;
-      addedLinkHTML += `</a></li>`;
-
-      document.getElementById(`nav_breadcrumb`).innerHTML += addedLinkHTML;
-    }
-    
-    function showTileMenu(menuArray, arrayName)
-    {
-      //strings to create
-      var tileLeftColumnHTML = "";
-      var tileRightColumnHTML = "";
-      
-      //hide mainMenu
-      document.getElementById('menu_mainTopic').classList.add(`d-none`);
-
-      //clear current tile/content menu
-      document.getElementById('menu_section').innerHTML= "";
-      document.getElementById('menu_content').innerHTML= "";
-      
-      tileLeftColumnHTML += `<div class="d-grid gap-1 col-6 p-1">`;
-      tileRightColumnHTML += `<div class="d-grid gap-1 col-6 p-1">`;
-
-      //iterate array items via even/odd
-      for (i=0; i<menuArray.length; i++)
-      { 
-        if (i % 2 == 0 )//even
-        {
-          //need to add breadcrumb here
-          tileLeftColumnHTML += `<button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;"`;
-          tileLeftColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) + `,'` + arrayName + `_0` + (i+1) +`');`;
-          tileLeftColumnHTML += `updateBreadcrumb('` + menuArray[i] + `', '` + arrayName + `_0` + (i+1) + `' , true)` + `">`;
-          tileLeftColumnHTML += menuArray[i];
-          tileLeftColumnHTML += `</button>`;
-
-        }else //odd
-        {
-          tileRightColumnHTML += `<button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;"`;
-          tileRightColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) + `,'` + arrayName + `_0` + (i+1) +`');`;
-          tileRightColumnHTML += `updateBreadcrumb('` + menuArray[i] + `', '` + arrayName + `_0` + (i+1) + `' , true)` + `">`;
-          tileRightColumnHTML += menuArray[i];
-          tileRightColumnHTML += `</button>`;
-        }
-
-      }
-      tileLeftColumnHTML += `</div>`;
-      tileRightColumnHTML += `</div>`;
-
-      document.getElementById('menu_section').innerHTML = tileLeftColumnHTML + tileRightColumnHTML;
-
-      //hardcode to make sure breadcrumb trail makes sense...
-      //if current ol in breadcrumb has more than 2 li, delete last one
-      if (document.getElementById(`nav_breadcrumb`).querySelectorAll('li').length > 2)
-      {
-        document.getElementById(`nav_breadcrumb`).removeChild(document.getElementById(`nav_breadcrumb`).lastElementChild);
-      }
-    }
-
-    function showContentMenu(menuArray, arrayName)
-    {
-      var contentHTML = "";
-      var pageToFetch = "";
-
-      //clear current menu
-      document.getElementById('menu_mainTopic').classList.add(`d-none`);
-      document.getElementById('menu_section').innerHTML= "";
-
-      //iterate and fill contentHTML
-      contentHTML += `<div class="d-grid gap-1 col p-1">`;
-
-      //breaking down the arrayName to be passed to fetchContent
-      tempArray = arrayName.match(/\d+/g);
-
-      if (tempArray[0] < 6)
-      {
-        pageToFetch += tempArray[0] + '_' + tempArray[1] + '_';
-
-      }else {
-        pageToFetch += tempArray[0] + '_';
-      }
-      
-
-      for (i=0; i<menuArray.length; i++)
-      {
-        contentHTML += `<button class="btn btn-outline-dark mt-2 rounded px-5" style="min-height: 70px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"`;
-        contentHTML += `onclick="fetchContent('`;
-        //menuArray[i] can be used to populate the offcanvasTitle
-        contentHTML += menuArray[i] + `','pages/`;
-        //contentHTML += `01_01_01.html`;
-        contentHTML += pageToFetch + '0'+ (i+1) + '.html';
-        contentHTML += `')">`;
-        //arrayName can be used to fetchContent - you'll need to specify for 06-08
-        contentHTML +=  menuArray[i];
-        contentHTML += `</button>`;
-      }
-
-      contentHTML += `</div>`;
-
-      document.getElementById('menu_content').innerHTML = contentHTML;
-
-    }
-
-    function fetchContent(sectionTitle, file) {
-      fetch(file)
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById("offcanvasBottomLabel").innerHTML = sectionTitle;
-            document.getElementById("offcanvasBottomContent").innerHTML = html;
-        })
-        .catch(err => {
-            document.getElementById("offcanvasBottomContent").innerHTML =
-                "<p style='color:red;'>Error loading content.</p>";
-            console.error(err);
-        });
-    }
-
-    function showOffCanvasContent()
-    {
-
-    }
-
-    
-
-  </script>
   
 </body>
 
