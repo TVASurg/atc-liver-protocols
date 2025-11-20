@@ -285,3 +285,11 @@ perspective: 1000px;
     font-weight: 500;    
   }
 }
+
+.btn-outline-dark:hover {
+  color: #212529 !important;
+  background-color: transparent !important;
+  border-color: #212529; /* Border color for dark outline button */
+  box-shadow: none; /* Remove any shadow */
+  outline: none; /* Remove outline */
+}

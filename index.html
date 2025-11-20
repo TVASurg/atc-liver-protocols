@@ -16,8 +16,8 @@
 <body>
 
   <main class="container">
-    <nav class="navbar navbar-light bg-primary p-5">
-      
+    <nav class="navbar navbar-light p-5">
+    <img class="img-fluid mx-auto d-block" src="images/logo-Transplant.svg"/>  
     </nav>    
 
     <div class="row">
@@ -82,7 +82,7 @@
 
       _01_menu:["Living donor evaluation", "Deceased donor evaluation"],
       _02_menu:["Transplant indications", "Contraindications", "Pre-transplant work up"],
-      _03_menu:["Listing and waitlist management", "Pre-transplant work up"],
+      _03_menu:["Listing and waitlist management", "Bloodwork and prep"],
       _04_menu:["Surgical (Procedure/Complications)","Medical (Medications/Management)"],
       _05_menu:["Immunosuppression","Common infections and treatment","Complications","Management"],
       _06_menu:["Pediatric patient transition", "Neuroendocrine liver metastases", "ABO-incompatible liver transplant protocol", "Mayo protocol for hilar cholangiocarcinoma"],
@@ -166,7 +166,7 @@
         {
           //need to add breadcrumb here
           tileLeftColumnHTML += `<button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;"`;
-          tileLeftColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) +`);`;
+          tileLeftColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) + `,'` + arrayName + `_0` + (i+1) +`');`;
           tileLeftColumnHTML += `updateBreadcrumb('` + menuArray[i] + `', '` + arrayName + `_0` + (i+1) + `' , true)` + `">`;
           tileLeftColumnHTML += menuArray[i];
           tileLeftColumnHTML += `</button>`;
@@ -174,7 +174,7 @@
         }else //odd
         {
           tileRightColumnHTML += `<button class="btn btn-outline-dark mt-2 rounded" style="min-height: 110px;"`;
-          tileRightColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) +`);`;
+          tileRightColumnHTML += `onclick="showContentMenu(collectionArrays.`+ arrayName + `_0` + (i+1) + `,'` + arrayName + `_0` + (i+1) +`');`;
           tileRightColumnHTML += `updateBreadcrumb('` + menuArray[i] + `', '` + arrayName + `_0` + (i+1) + `' , true)` + `">`;
           tileRightColumnHTML += menuArray[i];
           tileRightColumnHTML += `</button>`;
@@ -194,10 +194,10 @@
       }
     }
 
-    function showContentMenu(menuArray)
+    function showContentMenu(menuArray, arrayName)
     {
-      //strings to create
       var contentHTML = "";
+      var pageToFetch = "";
 
       //clear current menu
       document.getElementById('menu_mainTopic').classList.add(`d-none`);
@@ -205,11 +205,29 @@
 
       //iterate and fill contentHTML
       contentHTML += `<div class="d-grid gap-1 col p-1">`;
+
+      //breaking down the arrayName to be passed to fetchContent
+      tempArray = arrayName.match(/\d+/g);
+
+      if (tempArray[0] < 6)
+      {
+        pageToFetch += tempArray[0] + '_' + tempArray[1] + '_';
+
+      }else {
+        pageToFetch += tempArray[0] + '_';
+      }
       
+
       for (i=0; i<menuArray.length; i++)
       {
         contentHTML += `<button class="btn btn-outline-dark mt-2 rounded px-5" style="min-height: 70px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"`;
-        contentHTML += `onclick="fetchContent('pages/02_02_03.html')">`;
+        contentHTML += `onclick="fetchContent('`;
+        //menuArray[i] can be used to populate the offcanvasTitle
+        contentHTML += menuArray[i] + `','pages/`;
+        //contentHTML += `01_01_01.html`;
+        contentHTML += pageToFetch + '0'+ (i+1) + '.html';
+        contentHTML += `')">`;
+        //arrayName can be used to fetchContent - you'll need to specify for 06-08
         contentHTML +=  menuArray[i];
         contentHTML += `</button>`;
       }
@@ -220,10 +238,11 @@
 
     }
 
-    function fetchContent(file) {
+    function fetchContent(sectionTitle, file) {
       fetch(file)
         .then(response => response.text())
         .then(html => {
+            document.getElementById("offcanvasBottomLabel").innerHTML = sectionTitle;
             document.getElementById("offcanvasBottomContent").innerHTML = html;
         })
         .catch(err => {
